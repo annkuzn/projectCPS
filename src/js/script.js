@@ -43,7 +43,6 @@ for (let i = 0; i < clickBtnOpen.length; i++) {
         } else if (btn.dataset.action === "open-chat") { /* Заказать звонок, чат */
             elem.classList.add('modal-feedback--message');
         } else if (btn.dataset.action === "open-sidebar") { /* Сайдбар */
-            evt.preventDefault();
             elem = aside;
         }
 
