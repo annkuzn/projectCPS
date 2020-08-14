@@ -468,6 +468,51 @@ ul {
   .swiper-pagination-bullet:hover, .swiper-pagination-bullet:active, .swiper-pagination-bullet:focus {
     background-color: #B5B6BC; }
 
+.btn-send-order {
+  background: #FF3E79;
+  border: none;
+  border-radius: 16px;
+  height: 32px;
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: -0.15px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-align: left;
+  padding: 5px 18px;
+  float: right;
+  font-weight: bold;
+  cursor: pointer; }
+  @media (max-width: 767px) {
+    .btn-send-order {
+      position: absolute;
+      width: 119px;
+      bottom: 16px;
+      right: 16px; }
+      .btn-send-order::before {
+        right: 13px; } }
+  @media (min-width: 768px) {
+    .btn-send-order {
+      position: relative;
+      width: 136px; }
+      .btn-send-order::before {
+        right: 18px; } }
+  .btn-send-order:hover, .btn-send-order:focus {
+    -webkit-filter: opacity(0.7);
+            filter: opacity(0.7);
+    cursor: pointer; }
+  .btn-send-order::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 11px;
+    width: 6px;
+    height: 6px;
+    border-top: 2.5px solid white;
+    border-right: 2.5px solid white;
+    border-radius: 2.5px;
+    transform: rotate(45deg); }
+
 .aside {
   transition: 0.5s ease-out;
   z-index: 2; }
@@ -1033,51 +1078,6 @@ ul {
   .section__btn-read-more:focus, .section__btn-read-more:active, .section__btn-read-more:hover {
     transition: 0.05s;
     transform: scale(1.1); }
-
-.section__btn-send-order {
-  background: #FF3E79;
-  border: none;
-  border-radius: 16px;
-  height: 32px;
-  font-size: 12px;
-  line-height: 24px;
-  letter-spacing: -0.15px;
-  text-transform: uppercase;
-  color: #FFFFFF;
-  text-align: left;
-  padding: 5px 18px;
-  float: right;
-  font-weight: bold;
-  cursor: pointer; }
-  @media (max-width: 767px) {
-    .section__btn-send-order {
-      position: absolute;
-      width: 119px;
-      bottom: 16px;
-      right: 16px; }
-      .section__btn-send-order::before {
-        right: 13px; } }
-  @media (min-width: 768px) {
-    .section__btn-send-order {
-      position: relative;
-      width: 136px; }
-      .section__btn-send-order::before {
-        right: 18px; } }
-  .section__btn-send-order:hover, .section__btn-send-order:focus {
-    -webkit-filter: opacity(0.7);
-            filter: opacity(0.7);
-    cursor: pointer; }
-  .section__btn-send-order::before {
-    content: "";
-    display: inline-block;
-    position: absolute;
-    top: 11px;
-    width: 6px;
-    height: 6px;
-    border-top: 2.5px solid white;
-    border-right: 2.5px solid white;
-    border-radius: 2.5px;
-    transform: rotate(45deg); }
 
 .section-information {
   display: flex;
