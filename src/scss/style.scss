@@ -1,0 +1,25 @@
+
+$btn-color: #FF3E79;
+$nav-border-color: #B8FFEC;
+$section-border-color: #D9FFF5;
+$title-font-color: #7E7E82;
+
+@import 'fonts';
+@import 'swiper-bundle';
+@import 'styles';
+@import 'aside';
+@import 'modal';
+@import 'container';
+@import 'header';
+@import 'title';
+@import 'main';
+@import 'nav';
+@import 'section';
+@import 'section-information';
+@import 'section-brands';
+@import 'section-devices';
+@import 'section-services';
+@import 'footer';
+@import 'layout';
+@import 'normalize';
+

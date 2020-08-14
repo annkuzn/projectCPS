@@ -1,0 +1,16 @@
+.title {
+    font-size: 28px;
+    line-height: 40px;
+    letter-spacing: -0.6px;
+    font-weight: bold;
+  
+    &::before {
+		content: "";
+		position: absolute;
+		display: inline-block;
+		height: 40px;
+		width: 4px;
+		left: 0;
+		background-image: url(../img/highlight.svg);
+    }
+}

@@ -1,0 +1,33 @@
+.nav {
+
+    &__list {
+        display: flex;
+        overflow: auto;
+		position: relative;
+		
+		@media (min-width: 1366px) {
+			flex-wrap: wrap;
+		}
+	}
+      
+	&__item {
+		height: 40px;
+		display: flex;
+	}
+	
+	&__link {
+		padding: 8px 15px;
+		font-size: 16px;
+		white-space: nowrap;
+		font-weight: 500;
+		color: $title-font-color;
+		
+		&:hover, &:active, &:focus {
+			background: #FFFFFF;
+			border: 2px solid $nav-border-color;
+			border-radius: 6px;
+			padding: 8px 13px;
+			transition: 0.05s;
+		}
+	}
+}

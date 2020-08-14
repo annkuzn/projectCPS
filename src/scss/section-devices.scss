@@ -1,0 +1,25 @@
+.section-devices {
+
+    &__slide {
+        width: 240px;
+        height: 160px;
+    }
+  
+    &__link {
+        width: 240px;
+        height: 160px;
+        align-items: start;
+    
+        &::before {
+            bottom: 33px;
+        }
+    
+        &::after {
+            bottom: 16px;
+        }
+    }
+
+    &__button {
+        margin-top: 14px;
+    }
+}

@@ -1,0 +1,158 @@
+.header {
+
+	@media (max-width: 767px) {
+		padding: 23px 8px 16.6px;
+	}
+
+	&__menu, &__menu-list {
+		@media (max-width: 1365px) {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+	}
+
+	&__menu {
+
+		@media (min-width: 1366px) {
+			position: relative;
+			height: 0;
+		}
+	}
+
+	&__menu-list {
+
+		@media (min-width: 768px) and (max-width: 1365px) {
+			padding: 0 8px;
+		}
+
+		&--support {
+
+			@media (min-width: 1366px) {
+				display: flex;
+				position: absolute;
+				right: 0;
+			}
+		}
+
+		&--feedback {
+			justify-content: flex-end;
+			width: 70%;
+
+			@media (max-width: 767px) {
+				display: none;
+			}
+
+			@media (max-width: 1365px) {
+				justify-content: flex-end;
+				width: 70%;
+			}
+
+			@media (min-width: 768px) and (max-width: 1365px) {
+				padding-right: 12px;
+			}
+			
+			@media (min-width: 1366px) {
+				display: none;
+			}
+		}
+
+		&--main {
+
+			@media (min-width: 1366px) {
+				display: none;
+			}
+		}
+	}
+
+	&__menu-item {
+
+		@media (max-width: 1365px) {
+			margin: 0 8px;
+		}
+
+		&--sidebar {
+			position: relative;
+
+			@media (min-width: 768px) and (max-width: 1365px) {
+				margin-right: 32px;
+			}
+
+			&::after {
+				@media (min-width: 768px) and (max-width: 1365px) {
+					content: "";
+					position: absolute;
+					width: 2px;
+					height: 32px;
+					right: -20px;
+					top: 10%;
+					border-radius: 1px;
+					background: #EAEAEA;
+				}
+			  }
+		}
+
+		&--repair {
+			position: relative;
+
+			@media (min-width: 1366px) {
+				margin-right: 32px;
+			}
+
+			&::before {
+				@media (max-width: 1365px) {
+					content: "";
+					position: absolute;
+					width: 2px;
+					height: 32px;
+					left: -20px;
+					top: 10%;
+					border-radius: 1px;
+					background: #EAEAEA;
+				}
+			}
+		}
+	}
+
+	&__menu-link-block {
+		@media (min-width: 1366px) {
+			display: flex;
+			align-items: center;
+			height: 40px;
+		}
+	}
+
+	&__menu-link-span {
+
+		display: none;
+
+		@media (min-width: 1366px) {
+			display: inline-block;
+			letter-spacing: -0.2px;
+			padding-right: 8px;
+			vertical-align: middle;
+		}
+
+		&:focus, &:active, &:hover {
+
+			@media (min-width: 1366px) {
+				transition: 0.05;
+				transform: scale(1.1);
+			}
+		}
+	}
+
+	&--main {
+
+		@media (min-width: 768px) and (max-width: 1365px) {
+			padding: 15px 8px;
+			margin: -24px;
+			margin-bottom: 0;
+		}
+		
+		@media (max-width: 1365px) {
+			border-bottom: 1px solid $section-border-color;
+			background-color: white;
+		}
+	}
+}

@@ -1,0 +1,265 @@
+.section {
+
+	@media (min-width: 768px) and (max-width: 1365px) {
+		padding-bottom: 32px;
+	}
+
+	@media (max-width: 1365px) {
+		padding-bottom: 24px;
+	}
+
+	@media (min-width: 1366px) {
+		padding-bottom: 50px;
+	}
+
+	&__title {
+		text-transform: uppercase;
+		font-weight: normal;
+		color: $title-font-color;
+		border-top: 1px solid $section-border-color;
+		background-image: linear-gradient(to right, #F8F8F8, #FFFFFF);
+
+		@media (min-width: 768px) {
+			padding: 16px 24px;
+			margin: 0 -24px;
+		}
+
+		@media (max-width: 767px) {
+			padding: 16px;
+		}
+
+		@media (min-width: 1366px) {
+			margin-right: -29px;
+			margin-left: -34px;
+			padding: 16px 32px;
+		}
+	}
+
+	&__wrapper {
+		padding-bottom: 6px;
+
+		@media (min-width: 768px) {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: flex-start;
+			height: 184px;
+			overflow: hidden;
+			margin: 0 -12px;
+		}
+
+		@media (min-width: 1366px) {
+			margin-top: 24px;
+		}
+
+		&[data-section='open'] {
+			height: 100%;
+		}
+	}
+	
+	&__content {
+		min-height: 116px;
+		padding: 16px;
+		padding-bottom: 24px;
+
+		@media (min-width: 768px) {
+			padding: 0;
+		}
+
+		@media (min-width: 1366px) {
+			padding: 0;
+		}
+	}
+
+	&__slide {
+
+		@media (min-width: 768px) {
+			width: 224px;
+			margin: 16px 12px 0;
+		}
+
+		@media (max-width: 767px) {
+			width: 240px;
+		}
+
+		@media (min-width: 1366px) {
+			width: 240px;
+		}
+	}
+
+    &__text {
+        font-size: 14px;
+        font-weight: normal;
+    }
+  
+	&__link {
+		display: flex;
+		align-items: center;
+		position: relative;
+		font-size: 18px;
+		background: #fff;
+		padding: 16px;
+		border: 1px solid #EAEAEA;
+		border-radius: 6px;
+
+		&:hover, &:focus {
+			@media (min-width: 768px) {
+				transform: scale(1.05);
+			}
+		}
+
+		&::after {
+			content: "";
+			display: block;
+			position: absolute;
+			right: 16px;
+			width: 40px;
+			height: 40px;
+			border: 2px solid $btn-color;
+			border-radius: 50%;
+		}
+
+		&::before {
+			content: "";
+			display: inline-block;
+			position: absolute;
+			right: 35px;
+			width: 7px;
+			height: 7px;
+			border-top: 3px solid $btn-color;
+			border-right: 3px solid $btn-color;
+			border-radius: 2px;
+			transform: rotate(45deg);
+		}
+	}
+
+	&__pagination {
+		@media (max-width: 767px) {
+			height: 12px;
+		}
+	}
+
+	&__button {
+		@media (min-width: 768px) {
+			margin-top: 24px;
+		}
+	}
+
+	&__button, &__input {
+		@media (max-width: 767px) {
+			display: none;
+		}
+	}
+
+	&__btn-read-more {
+		height: 24px;
+		position: relative;
+		left: 30px;
+		border-width: 0;
+		background-color: #F8F8F8;
+		cursor: pointer;
+
+		@media (min-width: 768px) {
+			display: inline-block;
+		}
+
+		@media (max-width: 767px) {
+			display: none;
+		}
+
+		&::after {
+			content: "Показать все";
+			display: inline-block;
+			width: 100%;
+			height: 100%;
+		}
+
+		&.section-information__button {
+
+			&::after {
+				content: "Читать далее";
+			}
+		}
+
+		&::before {
+			content: " ";
+			height: 18px;
+			width: 17px;
+			position: absolute;
+			z-index: -1;
+			left: -25px;
+			display: inline-block;
+			background: url(../img/expand.svg) no-repeat 50%;
+		}
+
+		&[data-section='open'] {
+
+			&::after {
+				content: "Cкрыть";
+			}
+
+			&::before {
+				transform: rotate(180deg);
+			}
+		}
+
+		&:focus, &:active, &:hover {
+			transition: 0.05s;
+			transform: scale(1.1);
+		}
+	}
+
+	&__btn-send-order {
+		background: $btn-color;
+		border: none;
+		border-radius: 16px;
+		height: 32px;
+		font-size: 12px;
+		line-height: 24px;
+		letter-spacing: -0.15px;
+		text-transform: uppercase;
+		color: #FFFFFF;
+		text-align: left;
+		padding: 5px 18px;
+		float: right;
+		font-weight: bold;
+		cursor: pointer;
+
+		@media (max-width: 767px) {
+			position: absolute;
+			width: 119px;
+			bottom: 16px;
+			right: 16px;
+
+			&::before {
+				right: 13px;
+			}
+		}
+
+		@media (min-width: 768px) {
+			position: relative;
+			width: 136px;
+
+			&::before {
+				right: 18px;
+			}			
+		}
+
+		&:hover, &:focus {
+			filter: opacity(0.7);
+			cursor: pointer;
+		}
+
+		&::before {
+			content: "";
+			display: inline-block;
+			position: absolute;
+			top: 11px;
+			width: 6px;
+			height: 6px;
+			border-top: 2.5px solid white;
+			border-right: 2.5px solid white;
+			border-radius: 2.5px;
+			transform: rotate(45deg);
+		}
+	}
+}

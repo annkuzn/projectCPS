@@ -1,0 +1,181 @@
+
+.modal-feedback {
+	top: 0;
+	right: 0;
+	width: auto;
+	height: 100%;
+	z-index: 3;
+	box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
+	visibility: hidden;
+	transition: 0.7s ease-out;
+	transform: translateX(120%);
+
+	@media (max-width: 1365px) {
+		width: 320px;
+		overflow: auto;
+		position: fixed;
+	}
+
+	@media (min-width: 1366px) {
+		position: absolute;
+		width: 440px;
+		border-left: 1px solid;
+		border-color: $section-border-color;
+	}
+
+
+
+	&__container {
+		position: relative;
+		background-color: white;
+		width: 100%;
+		min-height: 620px;
+		height: 100%;
+
+		@media (max-width: 1365px) {
+			padding: 24px 16px;
+		}
+
+		@media (min-width: 1366px) {
+			padding: 24px 32px;
+		}
+	}
+
+	&__title {
+		margin-bottom: 24px;
+
+		&::after {
+			content: '';
+			height: 100%;
+			width: 100%;
+		}
+	}
+	  
+	&__input {
+		width: 100%;
+		min-height: 48px;
+		border: 1px solid #EAEAEA;
+		border-radius: 8px;
+		padding: 12px 16px;
+		margin-bottom: 16px;
+	
+		&[name="message"] {
+			resize: none;
+		}
+	}
+	
+	&__text {
+		font-size: 14px;
+		line-height: 16px;
+		margin-bottom: 18px;
+	}
+
+	&__link {
+		font-size: 14px;
+		line-height: 16px;
+		color: $btn-color;
+	}
+
+	&__btn {
+		position: relative;
+		width: 136px;
+
+		&:hover, &:focus {
+			filter: opacity(0.7);
+			cursor: pointer;
+		}
+	}
+
+	&__btn-exit {
+
+		@media (max-width: 1365px) {
+			margin-bottom: 32px;
+			position: relative;
+		}
+
+		@media (min-width: 1366px) {
+			position: absolute;
+			float: left;
+			left: -65px;
+		}
+	}
+
+	&--message {
+
+		.title::after {
+			content: 'Обратная связь';
+		}
+	}
+
+	&--request-call {
+
+		.title::after {
+			content: 'Заказать звонок';
+		}
+
+		.modal-feedback__input[type="text"], .modal-feedback__input[type="email"], .modal-feedback__input[name="message"] {
+			display: none;
+		}
+	}
+}	
+
+
+.modal {
+
+	&__btn-exit {
+		display: inline-block;
+		width: 40px;
+		height: 40px;
+		border: none;
+		border-radius: 50%;
+		background-color: $btn-color;
+
+		&:hover, &:focus {
+			filter: opacity(0.7);
+			cursor: pointer;
+		}
+
+		&::before {
+			content: "";
+			display: block;
+			width: 21.73px;
+			height: 2.17px;
+			background-color: white;
+			border-radius: 1px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%) rotate(45deg);
+		}
+
+		&::after {
+			content: "";
+			display: block;
+			width: 21.73px;
+			height: 2.17px;
+			background-color: white;
+			border-radius: 1px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%) rotate(-45deg);
+		}
+	}
+
+	&--active {
+		transform: translateX(0);
+		visibility: visible;
+	}
+}
+
+
+
+
+
+
+  
+
+
+
+  
+  

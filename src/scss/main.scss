@@ -1,0 +1,32 @@
+.main {
+
+	@media (max-width: 767px) {
+		min-height: 509px;
+	}
+
+	&__title {
+
+		margin: 0;
+
+		@media (max-width: 767px) {
+			padding: 24px 15px;
+		}
+
+		@media (min-width: 768px) and (max-width: 1365px) {
+			margin: 24px 0;
+		}
+
+		@media (min-width: 1366px) {
+			margin-bottom: 20px;
+		}
+	}
+
+    &__nav {
+		margin-bottom: 20px;
+		
+		@media (min-width: 768px) and (max-width: 1365px) {
+			margin: 0 -24px;
+		}
+	}
+	
+}

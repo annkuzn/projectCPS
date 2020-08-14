@@ -1,0 +1,140 @@
+.aside {
+	transition: 0.5s ease-out;
+	z-index: 2;
+
+	@media (max-width: 1365px) {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 320px;
+		height: 100%;
+		overflow: auto;
+		box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2), -2px 0px 4px rgba(69, 79, 126, 0.02);
+		transform: translateX(-120%);
+		visibility: hidden;
+
+	}
+
+	@media (min-width: 1366px) {
+		visibility: visible;
+		position: relative;
+		height: auto;
+		float: left;
+		width: 22.3%;
+	}
+
+
+	&__container {
+		background-color: white;
+		
+		padding: 18px 24px 32px;
+		width: 100%;
+
+		@media (max-width: 1365px) {
+			height: auto;		
+		}
+
+		@media (min-width: 1366px) {
+			position: relative;
+		}
+	}
+
+	&__header {
+		margin-bottom: 46px;
+	}
+
+	&__lang-list {
+		display: flex;
+		justify-content: space-between;
+		width: 88px;
+	}
+	  
+	&__lang-link {
+
+		&:active, &:hover, &:focus {
+			color: #7E7E82;
+		}
+	}
+
+	&__header-list {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__header-item--burger {
+
+		@media (min-width: 1366px) {
+			display: none;
+		}
+	}
+		
+	&__header-item--logo {
+		flex-grow: 1;
+
+		@media (max-width: 1365px) {
+			margin-left: 16px;
+		}
+
+		@media (min-width: 1366px) {
+			margin-left: 0;
+		}
+	}
+	
+	&__header-link {
+		position: relative;
+		transition-duration: 0.2s;
+	}
+
+	&__nav {
+		margin-bottom: 268px;
+	}
+
+	&__nav-list {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 420px;
+		position: relative;
+		left: -24px;
+	}
+	
+	&__nav-link {
+		height: 32px;
+		padding-left: 20px;
+		
+		&:hover, &:focus, &:active {
+			color: #7E7E82;
+			border-width: 4px;
+			border-style: solid;
+			border-image: url(../img/highlight.svg) 5;
+			border-right: none;
+		}
+	}
+	
+	&__contacts-list {
+		display: flex;
+		justify-content: space-between;
+		width: 152px;
+		margin-bottom: 16px;
+	}
+	
+	&__contacts-link {
+		display: inline-block;
+		transition-duration: 0.2s;
+	}
+	
+	&__contacts-email {
+		display: block;
+		margin-bottom: 12px;
+	}
+	
+	&__contacts-phone {
+		display: block;
+		font-weight: bold;
+		font-size: 24px;
+		line-height: 32px;
+		letter-spacing: -0.6px;
+		margin-bottom: 40px;
+	}
+}
