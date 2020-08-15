@@ -1,7 +1,7 @@
-const clickBtnClose = document.querySelectorAll('.modal__btn-exit');
+const modalBtnExit = document.querySelectorAll('.modal__btn-exit');
 const aside = document.querySelector('.aside');
 const asideContainer = document.querySelector('.aside__container');
-const clickBtnOpen = document.querySelectorAll('.btn-open');
+const modalBtnOpen = document.querySelectorAll('.btn-open');
 const container = document.querySelector('.container');
 const modalFeedback = document.querySelector('.modal-feedback');
 const layout = document.querySelector('.layout');
@@ -13,7 +13,7 @@ const html = document.querySelector('html');
 
 
 /* Обработчик для раскрытия модального окна  */
-clickBtnOpen.forEach(btn =>
+modalBtnOpen.forEach(btn =>
 
     btn.addEventListener('click', function (evt) {
         let elem;
@@ -72,7 +72,7 @@ clickBtnOpen.forEach(btn =>
 );
 
 /* Обработчик для закрытия модального окна  */
-clickBtnClose.forEach(btn =>
+modalBtnExit.forEach(btn =>
 
     btn.addEventListener('click', function (evt) {
         let elem;
