@@ -13,8 +13,7 @@ const html = document.querySelector('html');
 
 
 /* Обработчик для раскрытия модального окна  */
-for (let i = 0; i < clickBtnOpen.length; i++) {
-    let btn = clickBtnOpen[i];
+clickBtnOpen.forEach(btn =>
 
     btn.addEventListener('click', function (evt) {
         let elem;
@@ -70,11 +69,10 @@ for (let i = 0; i < clickBtnOpen.length; i++) {
             }, 1000);
         })
     })
-}
+);
 
 /* Обработчик для закрытия модального окна  */
-for (let i = 0; i < clickBtnClose.length; i++) {
-    let btn = clickBtnClose[i];
+clickBtnClose.forEach(btn =>
 
     btn.addEventListener('click', function (evt) {
         let elem;
@@ -115,7 +113,7 @@ for (let i = 0; i < clickBtnClose.length; i++) {
             elem.classList.remove('modal-feedback--request-call');
           }, 1000);
     })
-}
+);
 
 
 
@@ -124,33 +122,26 @@ for (let i = 0; i < clickBtnClose.length; i++) {
 if (window.matchMedia("(max-width: 1365px)").matches) {
     let asideLinks = aside.querySelectorAll('.aside__nav-link');
 
-    for (let i = 0; i < asideLinks.length; i++) {
-        let asideLink = asideLinks[i];
-        
-
+    asideLinks.forEach(asideLink => 
         asideLink.addEventListener('click', function(){
             let modalActive = document.querySelectorAll('.modal--active');
 
-            for(let i = 0; i < modalActive.length; i++) {
-                let modal = modalActive[i];
-                modal.classList.remove('modal--active');
-            }
+            modalActive.forEach(modal => 
+                modal.classList.remove('modal--active')
+            );
             layout.classList.remove('layout--active');
             body.style.overflow = 'auto';
         })
-    }
+    );
 }
 
 
 /* Обработчик для кнопок "Показать все" */
 const btnReadMore = document.querySelectorAll('.section__btn-read-more');
 
-for (let i = 0; i < btnReadMore.length; i++) {
-    let btn = btnReadMore[i];
-    let previous = btn.previousElementSibling;
-
+btnReadMore.forEach(btn =>
     btn.addEventListener('click', function () {
-        
+        let previous = btn.previousElementSibling;
         if(!this.hasAttribute('data-section')) {
             this.setAttribute('data-section', 'open');
             previous.setAttribute('data-section', 'open');
@@ -158,8 +149,8 @@ for (let i = 0; i < btnReadMore.length; i++) {
             this.removeAttribute('data-section');
             previous.removeAttribute('data-section');
         }
-    });
-}
+    })
+);
 
 /* SECTION-SERVICES */
 
