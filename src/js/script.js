@@ -174,9 +174,9 @@ if (window.matchMedia("(max-width: 767px)").matches) {
 }
 
 /* HEIGHT ASIDE DESKTOP */
-
+/* 
 let heightHtml = html.offsetHeight;
-
-if (window.matchMedia("(min-width: 1119px)").matches) {
-    asideContainer.style.height = heightHtml + 'px';
-}
+console.log(heightHtml);
+if (window.matchMedia("(min-width: 1366px)").matches) {
+    aside.style.height = heightHtml + 'px';
+} */
