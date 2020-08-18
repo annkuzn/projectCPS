@@ -12,9 +12,9 @@
             <nav class="header__menu">
                 <ul class="header__menu-list header__menu-list--main">
                     <li class="header__menu-item header__menu-item--sidebar btn-open-burger" data-action="open-sidebar">
-                        <a class="header__menu-link link-icon" href="#">
+                        <button class="header__menu-link icon-active">
                             <img src="./img/burger.svg" alt="Кнопка для раскрытия меню">
-                        </a>
+                        </button>
                     </li>
                     <li class="header__menu-item header__menu-item--logo">
                         <div class="logo">
@@ -26,17 +26,17 @@
                 </ul>
                 <ul class="header__menu-list header__menu-list--feedback">
                     <li class="header__menu-item">
-                        <a class="header__menu-link link-icon btn-open" href="#" data-action="open-call">
+                        <a class="header__menu-link icon-active btn-open" href="#" data-action="open-call">
                             <img src="./img/call.svg" alt="Кнопка, чтобы заказать звонок">
                         </a>
                     </li>
                     <li class="header__menu-item">
-                        <a class="header__menu-link link-icon btn-open" href="#" data-action="open-chat">
+                        <a class="header__menu-link icon-active btn-open" href="#" data-action="open-chat">
                             <img src="./img/chat.svg" alt="Кнопка, чтобы открыть чат">
                         </a>
                     </li>
                     <li class="header__menu-item">
-                        <a class="header__menu-link link-icon" href="#">
+                        <a class="header__menu-link icon-active" href="#">
                             <img src="./img/profile.svg" alt="Кнопка, чтобы открыть профиль">
                         </a>
                     </li>
@@ -265,8 +265,7 @@
         </footer>
         <div class="overlay"></div>
         <div class="modal modal-feedback" id="modal-feedback">
-            <div class="modal-feedback__container">
-                <button class="modal__btn-exit modal-feedback__btn-exit" data-action="close-call"></button>
+                <button class="modal-feedback__btn-exit btn-exit" data-action="close-call"></button>
                 <h2 class="modal-feedback__title title"></h2>
                 <form action="#" method="POST">
                     <input class="modal-feedback__input" type="text" name="name" placeholder="Имя" required autofocus>
@@ -278,29 +277,25 @@
                     </p>
                     <button class="modal-feedback__btn btn-send-order">Отправить</button>
                 </form>
-            </div>
         </div>
     </div>
-    <aside class="aside modal">
-        <div class="aside__container">
+    <aside class="aside">
             <header class="aside__header">
-                <ul class="aside__header-list">
-                    <li tabindex="0" class="aside__header-item aside__header-item--burger">
-                        <a href="index.html" class="aside__header-link modal__btn-exit aside__btn-exit link-icon" data-action="close-sidebar"></a>
-                    </li>
-                    <li tabindex="0" class="aside__header-item aside__header-item--logo">
+                    <div tabindex="0" class="aside__header-item--burger">
+                        <button class="aside__btn-exit btn-exit icon-active" data-action="close-sidebar"></button>
+                    </div>
+                    <div tabindex="0" class="aside__header-item--logo">
                         <div class="aside__header-logo logo">
                             <a href="#" class="aside__logo-link">
                                 <img src="./img/Group.svg" alt="Логотип компании CPS" class="logo__img">
                             </a>
                         </div>
-                    </li>
-                    <li tabindex="0" class="aside__header-item">
-                        <a href="#" class="aside__header-link link-icon">
+                    </div>
+                    <div tabindex="0">
+                        <button class="icon-active">
                             <img src="./img/search.svg" alt="Кнопка поиска" class="header__img">
-                        </a>
-                    </li>
-                </ul>
+                        </button>
+                    </div>
             </header>
             <nav class="aside__nav nav">
                 <ul class="aside__nav-list">
@@ -334,17 +329,17 @@
                 <div class="aside__contacts">
                     <ul class="aside__contacts-list">
                         <li tabindex="0" class="aside__contacts-item btn-open" data-action="open-call">
-                            <a href="#modal-feedback" class="aside__contacts-link link-icon">
+                            <a href="#modal-feedback" class="aside__contacts-link icon-active">
                                 <img src="./img/call.svg" alt="Кнопка, чтобы заказать звонок" class="contacts__img">
                             </a>
                         </li>
                         <li tabindex="0" class="aside__contacts-item btn-open" data-action="open-chat">
-                            <a href="#modal-feedback" class="aside__contacts-link link-icon">
+                            <a href="#modal-feedback" class="aside__contacts-link icon-active">
                                 <img src="./img/chat.svg" alt="Кнопка, чтобы открыть чат" class="contacts__img">
                             </a>
                         </li>
                         <li tabindex="0" class="aside__contacts-item">
-                            <a href="#" class="aside__contacts-link link-icon">
+                            <a href="#" class="aside__contacts-link icon-active">
                                 <img src="./img/profile.svg" alt="Кнопка, чтобы открыть профиль" class="contacts__img">
                             </a>
                         </li>
@@ -354,17 +349,16 @@
                 </div>
                 <ul class="aside__lang-list">
                     <li tabindex="0" class="aside__lang-item">
-                        <a href="#" class="aside__lang-link">RU</a>
+                        <button class="aside__lang-link">RU</button>
                     </li>
                     <li tabindex="0" class="aside__lang-item">
-                        <a href="#" class="aside__lang-link">EN</a>
+                        <button class="aside__lang-link">EN</button>
                     </li>
                     <li tabindex="0" class="aside__lang-item">
-                        <a href="#" class="aside__lang-link">CH</a>
+                        <button class="aside__lang-link">CH</button>
                     </li>
                 </ul>      
             </footer>
-        </div>
         <div class="overlay-aside"></div>
     </aside>
 <script type="text/javascript" src="./js/bundle.js"></script></body>   
