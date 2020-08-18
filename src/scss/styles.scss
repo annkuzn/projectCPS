@@ -16,8 +16,12 @@
 body {
 	background-color: #F8F8F8;
 	max-width: 1440px;
-	position: static;
 	display: flex;
+	flex-direction: row-reverse;
+
+	&.hidden {
+		overflow: hidden;
+	}
 }
 
 * {

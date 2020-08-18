@@ -1,6 +1,5 @@
 .aside {
 	transition: 0.5s ease-out;
-	z-index: 2;
 
 	@media (max-width: 1365px) {
 		position: fixed;
@@ -18,7 +17,7 @@
 	@media (min-width: 1366px) {
 		visibility: visible;
 		position: relative;
-		float: left;
+		height: auto;
 		width: 22.3%;
 	}
 
