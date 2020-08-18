@@ -28,10 +28,6 @@ let closeMenuByPressEscape = function() {
     });
 }
 
-
-
-
-
 openMenuButtonClickHandler.addEventListener('click', function() {
     aside.classList.add('modal--active');
     overlay.classList.add('overlay--active');
