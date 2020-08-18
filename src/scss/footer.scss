@@ -17,6 +17,13 @@
         padding-top: 32px;
     }
 
+    @media (min-width: 1366px) {
+        margin-right: -29px;
+        margin-left: -34px;
+        padding: 32px;
+        padding-bottom: 0;
+    }
+
     &__block {
 
         @media (max-width: 767px) {

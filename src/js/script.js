@@ -4,7 +4,8 @@ const asideContainer = document.querySelector('.aside__container');
 const modalBtnOpen = document.querySelectorAll('.btn-open');
 const container = document.querySelector('.container');
 const modalFeedback = document.querySelector('.modal-feedback');
-const layout = document.querySelector('.layout');
+const overlay = document.querySelector('.overlay');
+const overlayAside = document.querySelector('.overlay-aside');
 const body = document.querySelector('body');
 const html = document.querySelector('html');
 
@@ -25,15 +26,16 @@ modalBtnOpen.forEach(btn =>
             modalBtnExit = elem.querySelector('.modal__btn-exit');
 
             modalBtnExit.style.display = 'block';
-
-            /* layout поверх aside */
+            overlayAside.classList.add('overlay-aside--active');
+            /* overlay поверх aside */
             if (window.matchMedia("(max-width: 1365px)").matches) {
-                let modalActive = document.querySelectorAll('.modal--active');
+                
+/*                 let modalActive = document.querySelectorAll('.modal--active');
                 if (modalActive.length >= 1) {
-                    layout.style.zIndex = 2;
+                    overlay.style.zIndex = 2;
                 } else {
-                    layout.style.zIndex = 1;
-                }
+                    overlay.style.zIndex = 1;
+                } */
             }
         }
         
@@ -46,21 +48,21 @@ modalBtnOpen.forEach(btn =>
         }
 
         elem.classList.add('modal--active');
-        layout.classList.add('layout--active');
+        overlay.classList.add('overlay--active');
         body.style.overflow = 'hidden';
 
         /* Обработчик заблюреной зоны для закрытия модального окна */
-        layout.addEventListener('click', function () {
+        overlay.addEventListener('click', function () {
 
             if (modalBtnExit) {
                 modalBtnExit.style.display = 'none';
             }
             elem.classList.remove('modal--active');
-            layout.classList.remove('layout--active');
+            overlay.classList.remove('overlay--active');
             body.style.overflow = 'auto';
 
             if (window.matchMedia("(max-width: 1365px)").matches) {
-                layout.style.zIndex = 1;
+                overlay.style.zIndex = 1;
             }
     
             setTimeout(function() {
@@ -88,7 +90,7 @@ modalBtnExit.forEach(btn =>
             }
             
             if (window.matchMedia("(max-width: 1365px)").matches) {
-                layout.style.zIndex = 1;
+                overlay.style.zIndex = 1;
             }
 
         }
@@ -101,7 +103,7 @@ modalBtnExit.forEach(btn =>
         let modalActive = document.querySelectorAll('.modal--active');
 
         if (modalActive.length === 1) {
-            layout.classList.remove('layout--active');
+            overlay.classList.remove('overlay--active');
         }
 
         elem.classList.remove('modal--active');
@@ -129,7 +131,7 @@ if (window.matchMedia("(max-width: 1365px)").matches) {
             modalActive.forEach(modal => 
                 modal.classList.remove('modal--active')
             );
-            layout.classList.remove('layout--active');
+            overlay.classList.remove('overlay--active');
             body.style.overflow = 'auto';
         })
     );
@@ -171,12 +173,4 @@ if (window.matchMedia("(max-width: 767px)").matches) {
     timeSpan.forEach(elem =>
         elem.insertAdjacentHTML('beforebegin', '<span class="service-title">Срок</span>')
     );
-}
-
-/* HEIGHT ASIDE DESKTOP */
-
-let heightHtml = html.offsetHeight;
-
-if (window.matchMedia("(min-width: 1119px)").matches) {
-    asideContainer.style.height = heightHtml + 'px';
 }
