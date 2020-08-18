@@ -139,38 +139,7 @@ if (window.matchMedia("(max-width: 1365px)").matches) {
 
 
 /* Обработчик для кнопок "Показать все" */
-const btnReadMore = document.querySelectorAll('.section__btn-read-more');
 
-btnReadMore.forEach(btn =>
-    btn.addEventListener('click', function () {
-        let previous = btn.previousElementSibling;
-        if (!this.hasAttribute('data-section')) {
-            this.setAttribute('data-section', 'open');
-            previous.setAttribute('data-section', 'open');
-        } else {
-            this.removeAttribute('data-section');
-            previous.removeAttribute('data-section');
-        }
-    })
-);
 
 /* SECTION-SERVICES */
 
-const serviceTitle = document.querySelector('.section-services__service--title');
-const priceTitle = document.querySelector('.section-services__price--title');
-const timeTitle = document.querySelector('.section-services__time--title');
-const serviceSpan = document.querySelectorAll('.section-services__service');
-const priceSpan = document.querySelectorAll('.section-services__price');
-const timeSpan = document.querySelectorAll('.section-services__time');
-
-if (window.matchMedia("(max-width: 767px)").matches) {
-    serviceSpan.forEach(elem =>
-        elem.insertAdjacentHTML('beforebegin', '<span class="service-title">Ремонтные услуги</span>')
-    );
-    priceSpan.forEach(elem =>
-        elem.insertAdjacentHTML('beforebegin', '<span class="service-title">Цена</span>')
-    );
-    timeSpan.forEach(elem =>
-        elem.insertAdjacentHTML('beforebegin', '<span class="service-title">Срок</span>')
-    );
-}

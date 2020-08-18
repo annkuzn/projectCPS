@@ -1,6 +1,7 @@
 const openMenuButtonClickHandler = document.querySelector('.btn-open-burger');
 const modalBtnExit = document.querySelector('.aside__btn-exit');
 const overlay = document.querySelector('.overlay');
+const asideLinks = document.querySelectorAll('.aside__nav-link');
 const aside = document.querySelector('.aside');
 const body = document.querySelector('body');
 const escapeCode = 27;
@@ -28,6 +29,11 @@ let closeMenuByPressEscape = function() {
     });
 }
 
+let closeMenuByLink = function() {
+    asideLinks.forEach(asideLink => 
+        asideLink.addEventListener('click', closeMenu));
+}
+
 openMenuButtonClickHandler.addEventListener('click', function() {
     aside.classList.add('modal--active');
     overlay.classList.add('overlay--active');
@@ -36,6 +42,7 @@ openMenuButtonClickHandler.addEventListener('click', function() {
     closeMenuByPressBtnExit();
     closeMenuByPressOverlay();
     closeMenuByPressEscape();
+    closeMenuByLink();
 })
 
 

@@ -1,5 +1,6 @@
 import "../scss/style.scss";
-/* import "./script.js";
- */import "./swiper/swiper.js";
+import "./swiper/swiper.js";
 import "./aside.js";
+import "./btn-read-more.js";
+import "./section-services.js";
 
