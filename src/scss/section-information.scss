@@ -41,7 +41,8 @@
         }
 
         &[data-section='open'] {
-            height: 90%;
+            height: 100%;
+            margin-bottom: -20px;            
         }
     }
 

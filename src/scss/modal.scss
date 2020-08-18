@@ -4,13 +4,17 @@
 	right: 0;
 	width: auto;
 	height: 100%;
-/* 	z-index: 3;
- */	visibility: hidden;
-
+	visibility: hidden;
+	position: relative;
+	background-color: white;
+	width: 100%;
+	min-height: 620px;
+	height: 100%;
+	
 	@media (max-width: 1365px) {
 		width: 320px;
-		overflow: auto;
 		position: fixed;
+ 		padding: 24px 16px;
 		transition: 0.7s ease-out;
 		transform: translateX(120%);
 		box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
@@ -19,29 +23,12 @@
 	@media (min-width: 1366px) {
 		position: absolute;
 		width: 440px;
-	}
-
-
-
-	&__container {
-		position: relative;
-		background-color: white;
-		width: 100%;
-		min-height: 620px;
-		height: 100%;
-
-		@media (max-width: 1365px) {
-			padding: 24px 16px;
-		}
-
-		@media (min-width: 1366px) {
-			padding: 24px 32px;
-			transition: 0.7s ease-out;
-			transform: translateX(120%);
-			box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
-			border-left: 1px solid;
-			border-color: $section-border-color;
-		}
+		padding: 24px 32px;
+		transition: 0.7s ease-out;
+		transform: translateX(120%);
+		box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
+		border-left: 1px solid;
+		border-color: $section-border-color;
 	}
 
 	&__title {
@@ -125,59 +112,9 @@
 			display: none;
 		}
 	}
-}	
-
-
-.modal {
-
-	&__btn-exit {
-		display: inline-block;
-		width: 40px;
-		height: 40px;
-		border: none;
-		border-radius: 50%;
-		background-color: $btn-color;
-
-		&:hover, &:focus {
-			filter: opacity(0.7);
-			cursor: pointer;
-		}
-
-		&::before {
-			content: "";
-			display: block;
-			width: 21.73px;
-			height: 2.17px;
-			background-color: white;
-			border-radius: 1px;
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%) rotate(45deg);
-		}
-
-		&::after {
-			content: "";
-			display: block;
-			width: 21.73px;
-			height: 2.17px;
-			background-color: white;
-			border-radius: 1px;
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%) rotate(-45deg);
-		}
-	}
 
 	&--active {
-		visibility: visible;
 		transform: translateX(0);
-
-		.modal-feedback__container {
-			transform: translateX(0);
-		}
-		
 	}
 }
 
