@@ -1306,13 +1306,13 @@ button {
       width: 30%; } }
   .footer__block.privacy-policy {
     height: 30px; }
-    .footer__block.privacy-policy:hover {
-      transition: 0.05s;
-      transform: scale(1.1);
-      cursor: pointer; }
   @media (min-width: 768px) {
     .footer__block:last-child {
       text-align: right; } }
+  .footer__link:hover {
+    transition: 0.05s;
+    transform: scale(1.1);
+    cursor: pointer; }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
