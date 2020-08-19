@@ -1,5 +1,5 @@
 
-.modal-feedback {
+.modal {
 	top: 0;
 	right: 0;
 	width: auto;
@@ -10,10 +10,11 @@
 	width: 100%;
 	min-height: 620px;
 	height: 100%;
+	z-index: 1;
 	
 	@media (max-width: 1365px) {
 		width: 320px;
-		position: fixed;
+		position: absolute;
  		padding: 24px 16px;
 		transition: 0.7s ease-out;
 		transform: translateX(120%);
@@ -114,6 +115,7 @@
 	}
 
 	&--active {
+		visibility: visible;
 		transform: translateX(0);
 	}
 }

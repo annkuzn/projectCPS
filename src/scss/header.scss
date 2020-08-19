@@ -4,6 +4,17 @@
 		padding: 23px 8px 16.6px;
 	}
 
+	@media (min-width: 768px) and (max-width: 1365px) {
+		padding: 15px 8px;
+		margin: -24px;
+		margin-bottom: 0;
+	}
+	
+	@media (max-width: 1365px) {
+		border-bottom: 1px solid $section-border-color;
+		background-color: white;
+	}
+
 	&__menu, &__menu-list {
 		@media (max-width: 1365px) {
 			display: flex;
@@ -139,20 +150,6 @@
 				transition: 0.05;
 				transform: scale(1.1);
 			}
-		}
-	}
-
-	&--main {
-
-		@media (min-width: 768px) and (max-width: 1365px) {
-			padding: 15px 8px;
-			margin: -24px;
-			margin-bottom: 0;
-		}
-		
-		@media (max-width: 1365px) {
-			border-bottom: 1px solid $section-border-color;
-			background-color: white;
 		}
 	}
 }

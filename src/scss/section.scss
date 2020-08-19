@@ -84,6 +84,11 @@
 		@media (min-width: 1366px) {
 			width: 240px;
 		}
+
+		&--devices {
+			width: 240px;
+			height: 160px;
+		}
 	}
 
     &__text {
@@ -130,6 +135,25 @@
 			border-radius: 2px;
 			transform: rotate(45deg);
 		}
+
+		
+		&--brands {
+			height: 72px;
+		}
+
+		&--devices {
+			width: 240px;
+			height: 160px;
+			align-items: start;
+		
+			&::before {
+				bottom: 33px;
+			}
+		
+			&::after {
+				bottom: 16px;
+			}
+		}
 	}
 
 	&__pagination {
@@ -141,6 +165,15 @@
 	&__button {
 		@media (min-width: 768px) {
 			margin-top: 24px;
+		}
+
+		&--brands {
+			margin-top: 14px;
+		}
+
+		&--devices {
+			margin-top: 14px;
+
 		}
 	}
 
