@@ -37,18 +37,21 @@
 
         &.privacy-policy {
             height: 30px;
-
-            &:hover {
-                transition: 0.05s;
-                transform: scale(1.1);
-                cursor: pointer;
-            }
         }
 
         &:last-child {
             @media (min-width: 768px) {
                 text-align: right;
             }
+        }
+    }
+
+    &__link {
+
+        &:hover {
+            transition: 0.05s;
+            transform: scale(1.1);
+            cursor: pointer;
         }
     }
 }
