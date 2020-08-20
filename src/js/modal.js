@@ -9,7 +9,7 @@ const ESCAPE_KEYCODE = 27;
 /* CLOSE MODAL */
 const closeModal = function() {
     modal.classList.remove('modal--active');
-    overlayMenu.classList.remove('overlay-menu--active');
+    overlayMenu.classList.remove('overlay--active-menu');
 
     setTimeout(function() {
         modal.classList.remove('modal--request-call');
@@ -39,7 +39,7 @@ const escapeKeyDownHandler = function(evt) {
 /* OPEN MODAL */
 const openModal = function() {
     modal.classList.add('modal--active');
-    overlayMenu.classList.add('overlay-menu--active');
+    overlayMenu.classList.add('overlay--active-menu');
 
     closeModalButton.addEventListener('click', closeModalButtonClickHandler);
     overlayMenu.addEventListener('click', closeModalOverlayClickHandler);
