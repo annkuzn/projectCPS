@@ -4,22 +4,15 @@ const overlay = document.querySelector('.overlay');
 const menu = document.querySelector('.menu');
 const ESCAPE_KEYCODE = 27;
 
-/* OPEN MENU */
-const openMenu = function() {
-    menu.classList.add('menu--active');
-    overlay.classList.add('overlay--active');
-}
-
-const openMenuButtonClickHandler = function() {
-    openMenu();
-}
-
-openMenuButton.addEventListener('click', openMenuButtonClickHandler);
 
 /* CLOSE MENU */
 const closeMenu = function() {
     menu.classList.remove('menu--active');
     overlay.classList.remove('overlay--active');
+
+    closeMenuButton.removeEventListener('click', closeMenuButtonClickHandler);
+    overlay.removeEventListener('click', closeMenuOverlayClickHandler);
+    document.removeEventListener('keydown', escapeKeyDownHandler);
 }
 
 const closeMenuButtonClickHandler = function() {
@@ -36,6 +29,19 @@ const escapeKeyDownHandler = function(evt) {
     }
 }
 
-closeMenuButton.addEventListener('click', closeMenuButtonClickHandler);
-overlay.addEventListener('click', closeMenuOverlayClickHandler);
-document.addEventListener('keydown', escapeKeyDownHandler);
+/* OPEN MENU */
+const openMenu = function() {
+    menu.classList.add('menu--active');
+    overlay.classList.add('overlay--active');
+
+    closeMenuButton.addEventListener('click', closeMenuButtonClickHandler);
+    overlay.addEventListener('click', closeMenuOverlayClickHandler);
+    document.addEventListener('keydown', escapeKeyDownHandler);
+}
+
+const openMenuButtonClickHandler = function() {
+    openMenu();
+}
+
+
+openMenuButton.addEventListener('click', openMenuButtonClickHandler);
