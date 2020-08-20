@@ -1,7 +1,7 @@
 const openModalCallButton = document.querySelectorAll('.btn-open-modal--call');
 const openModalChatButton = document.querySelectorAll('.btn-open-modal--chat');
 const closeModalButton = document.querySelector('.modal__btn-exit');
-const overlayMenu = document.querySelector('.overlay');
+const overlayMenu = document.querySelector('.overlay--menu');
 const modal = document.querySelector('.modal');
 const ESCAPE_KEYCODE = 27;
 
@@ -9,7 +9,7 @@ const ESCAPE_KEYCODE = 27;
 /* CLOSE MODAL */
 const closeModal = function() {
     modal.classList.remove('modal--active');
-    overlayMenu.classList.remove('overlay--active-menu');
+    overlayMenu.classList.remove('overlay--active');
 
     setTimeout(function() {
         modal.classList.remove('modal--request-call');
@@ -39,7 +39,7 @@ const escapeKeyDownHandler = function(evt) {
 /* OPEN MODAL */
 const openModal = function() {
     modal.classList.add('modal--active');
-    overlayMenu.classList.add('overlay--active-menu');
+    overlayMenu.classList.add('overlay--active');
 
     closeModalButton.addEventListener('click', closeModalButtonClickHandler);
     overlayMenu.addEventListener('click', closeModalOverlayClickHandler);

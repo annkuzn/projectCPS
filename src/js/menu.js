@@ -1,6 +1,6 @@
 const openMenuButton = document.querySelector('.header__btn-open-sidebar');
 const closeMenuButton = document.querySelector('.menu__btn-exit');
-const overlay = document.querySelector('.overlay');
+const overlayContainer = document.querySelector('.overlay--container');
 const menu = document.querySelector('.menu');
 const ESCAPE_KEYCODE = 27;
 
@@ -8,10 +8,10 @@ const ESCAPE_KEYCODE = 27;
 /* CLOSE MENU */
 const closeMenu = function() {
     menu.classList.remove('menu--active');
-    overlay.classList.remove('overlay--active-container');
+    overlayContainer.classList.remove('overlay--active');
 
     closeMenuButton.removeEventListener('click', closeMenuButtonClickHandler);
-    overlay.removeEventListener('click', closeMenuOverlayClickHandler);
+    overlayContainer.removeEventListener('click', closeMenuOverlayClickHandler);
     document.removeEventListener('keydown', escapeKeyDownHandler);
 }
 
@@ -32,10 +32,10 @@ const escapeKeyDownHandler = function(evt) {
 /* OPEN MENU */
 const openMenu = function() {
     menu.classList.add('menu--active');
-    overlay.classList.add('overlay--active-container');
+    overlayContainer.classList.add('overlay--active');
 
     closeMenuButton.addEventListener('click', closeMenuButtonClickHandler);
-    overlay.addEventListener('click', closeMenuOverlayClickHandler);
+    overlayContainer.addEventListener('click', closeMenuOverlayClickHandler);
     document.addEventListener('keydown', escapeKeyDownHandler);
 }
 

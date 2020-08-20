@@ -109,7 +109,7 @@
 			content: 'Заказать звонок';
 		}
 
-		.modal-feedback__input[type="text"], .modal-feedback__input[type="email"], .modal-feedback__input[name="message"] {
+		.modal__input[type="text"], .modal__input[type="email"], .modal__input[name="message"] {
 			display: none;
 		}
 	}
