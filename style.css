@@ -631,7 +631,7 @@ button {
   .menu--active {
     transform: translateX(0); }
 
-.overlay--active, .overlay-menu--active {
+.overlay--active-container, .overlay--active-menu {
   min-width: 100%;
   max-width: 1440px;
   min-height: 100%;
@@ -640,10 +640,10 @@ button {
   opacity: 0.9;
   top: 0; }
   @media (min-width: 728px) {
-    .overlay--active, .overlay-menu--active {
+    .overlay--active-container, .overlay--active-menu {
       margin-left: -24px; } }
   @media (min-width: 1366px) {
-    .overlay--active, .overlay-menu--active {
+    .overlay--active-container, .overlay--active-menu {
       margin-left: -364px; } }
 
 .modal {
