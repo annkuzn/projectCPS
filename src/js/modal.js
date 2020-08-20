@@ -1,7 +1,7 @@
 const openModalCallButton = document.querySelectorAll('.btn-open-modal--call');
 const openModalChatButton = document.querySelectorAll('.btn-open-modal--chat');
 const closeModalButton = document.querySelector('.modal__btn-exit');
-const overlayMenu = document.querySelector('.overlay-menu');
+const overlayMenu = document.querySelector('.overlay');
 const modal = document.querySelector('.modal');
 const ESCAPE_KEYCODE = 27;
 
