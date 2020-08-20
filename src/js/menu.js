@@ -19,7 +19,7 @@ const closeMenuButtonClickHandler = function() {
      closeMenu();
 }
 
-const closeMenuOverlayClickHandler = function() {
+const overlayClickHandler = function() {
     closeMenu();
 }
 
@@ -35,7 +35,7 @@ const openMenu = function() {
     overlayContainer.classList.add('overlay--active');
 
     closeMenuButton.addEventListener('click', closeMenuButtonClickHandler);
-    overlayContainer.addEventListener('click', closeMenuOverlayClickHandler);
+    overlayContainer.addEventListener('click', overlayClickHandler);
     document.addEventListener('keydown', escapeKeyDownHandler);
 }
 
